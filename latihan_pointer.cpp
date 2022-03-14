@@ -25,8 +25,6 @@ int main()
     cin >> jml_input;
     cout << endl;
 
-   
-
     for (int i = 0; i < jml_input; i++)
     {
         cout << "Masukkan Data ke-" << i + 1 << endl;
@@ -49,6 +47,7 @@ int main()
         cout << "Jumlah Barang    : " << brg.jml_barang[i] << endl;
         cout << endl;
     }
+
     delete[] brg.nama_barang;
     delete[] brg.jml_barang;
     delete[] brg.kode_barang;
