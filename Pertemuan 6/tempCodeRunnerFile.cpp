@@ -1,0 +1,3 @@
+deleteAwal();
+    cout << endl;
+    tampilkanList();
