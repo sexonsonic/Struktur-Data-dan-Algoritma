@@ -46,22 +46,22 @@ void insertAkhir( int nilai ) { // fungsi insert pada akhir linked list
     }
 }
 
-void deleteAwal()
+void deleteAwal() // fungsi delete pada awal linked list
 {
-    if (head == NULL)
+    if (head == NULL) // kondisi apabila head NULL (kosong)
     {
-        cout << "List Empty";
+        cout << "List Empty"; // Menampilkan keterangan
     }
     else
     {
-        node *hps = head;
-        head = head->next;
-        free(hps);
+        node *hps = head; // mendeklarasi node hps menjadi head
+        head = head->next; // memindahkan posisi HEAD yang sekarang ke head->next, dimana adalah node setelah head saat ini
+        free(hps); // free adalah fungsi untuk menghapus
     }
     
 }
 
-void deleteTengah(node **head_ref, int key)
+void deleteTengah(node **head_ref, int key) // fungsi delete tengah linked list
 {
     // Store head node
     node *temp = *head_ref;
@@ -105,23 +105,23 @@ void deleteAkhir()
   if (head == NULL)
   {
       cout << "List Empty";
-  }
+  } // kondisi jika head tidak mempunyai value atau isi
   else if (head->next == NULL)
   {
-      hps = head;
-      head = NULL;
-      free(hps);
-  }
+      hps = head; // mendeklarasikan variable hps menjadi head
+      head = NULL; // menjadikan head sebagai NULL atau kosong
+      free(hps); // menghapus isi variabel hps
+  } 
   else
   {
-      hps = head;
-      while (hps->next != NULL)
+      hps = head; // mendeklarasikan variable hps menjadi head
+      while (hps->next != NULL) // kondisi apabila hps->next tidak sama dengan NULL atau kosong
       {
-          prev = hps;
-          hps = hps->next;
+          prev = hps; // mengubah variabel prev menjadi hps
+          hps = hps->next; // mendeklarasikan variable hps menjadi hps->next
       }
-    prev->next = NULL;
-    free(hps);
+    prev->next = NULL; // varibel prev->next diubah menjadi NULL/Kosong
+    free(hps); // menghapus value dari variable hps
   }
   
 }
