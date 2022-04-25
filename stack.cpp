@@ -4,7 +4,9 @@
 #define MAX 10 // batas stack yang ingin dibuat, boleh lebih
 using namespace std;
 
-int top = -1, Stack[MAX];
+int top = -1,
+    Stack[MAX],
+    data = 0;
 
 void push()
 {
@@ -56,9 +58,17 @@ void Print()
         for (int i = top; i >= 0; i--)
         {
             cout << "     XXXXX[ " << Stack[i] << " ]XXXXX" << endl;
+            data = Stack[i];
         }
         cout << "===========================" << endl;
+        
     }
+}
+
+void Find(char p)
+{
+    
+    
 }
 
 int main()
@@ -70,9 +80,9 @@ int main()
         cout << "\n1. Push"
              << "\n2. Pop"
              << "\n3. Clear"
-             << "\n4. Exit"
-             << "\nPergerakan ( TOP ) : " << top
-             << "\\nn>> Choose : ";
+             << "\n4. Find"
+             << "\n5. Exit"
+             << "\n>> Choose : ";
         cin >> choose;
         switch (choose)
         {
@@ -89,7 +99,11 @@ int main()
             cout << "\nClear Succes" << endl;
             getch();
             break;
-        case 4:
+        case 4 :
+            Find();
+            getch();
+            break;
+        case 5:
             cout << "Terima Kasih telah menggunakan program ini :)" << endl;
             getch();
             break;
@@ -99,5 +113,5 @@ int main()
             break;
         }
         system("cls");
-    } while (choose != 4);
+    } while (choose != 5);
 }
